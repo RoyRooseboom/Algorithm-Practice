@@ -1,29 +1,32 @@
-public class BubbleSort {
-    public static void main(String[] args) {
+public class BubbleSort 
+{
+    public static void main(String[] args) 
+    {
         int[] data = {22,54,21,398,48,0,4,9,67,45,60,74,81,27};
     
-        BubbleSort bs = new BubbleSort();
-        bs.Sort(data);
-    }
+        int loopAmount = data.length - 1;
 
-    public void Sort(int[] dataList) {
+        for (int x = 0; x < loopAmount; x++) 
+        {
+            boolean swapped = false;
 
-        int loopAmount = dataList.length - 1;
-
-        for (int x = 0; x < loopAmount; x++) {
-            for (int i = 0; i < loopAmount; i++) {
-                if(dataList[i] > dataList[i+1]) {
-
+            for (int i = 0; i < loopAmount; i++) 
+            {
+                if(data[i] > data[i+1]) 
+                {
                     int temp;
-                    temp = dataList[i];
-                    dataList[i] = dataList[i+1];
-                    dataList[i+1] = temp;
-
+                    temp = data[i];
+                    data[i] = data[i+1];
+                    data[i+1] = temp;
+                    swapped = true;
                 }
             }
+            
+            if (!swapped) break;
         }
 
-        for (int i : dataList) {
+        for (int i : data) 
+        {
             System.out.print(i + " | ");
         }
     }
