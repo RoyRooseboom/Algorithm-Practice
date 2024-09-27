@@ -2,7 +2,7 @@ public class InsertionSort {
     public static void main(String[] args) {
         InsertionSort sort = new InsertionSort();
 
-        int[] dataNumbers = {8,5,9,2,7,3,5,6,4};
+        int[] dataNumbers = {8,5,9,12,71,3,35,6,24};
 
         sort.sort(dataNumbers);
 
